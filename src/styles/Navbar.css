@@ -1,0 +1,77 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #00eeff94;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo left, links center, buttons right */
+  padding: 0 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+/* Logo */
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Navigation links (centered) */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0 auto; /* centers links */
+  gap: 40px;
+  cursor: pointer;
+}
+
+.nav-links li a {
+  color: black;
+  text-decoration: none;
+  display: inline-block;          /* important for transform to work */
+  transition: color 0s ease, transform 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff0000;
+  transform: scale(1.5); 
+}
+
+/* Right side buttons */
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Icons */
+.icon {
+  font-size: 40px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.icon:hover {
+  color: #0077b5; /* LinkedIn blue hover */
+}
+
+/* Buttons */
+.btn {
+  font-size: 20px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
