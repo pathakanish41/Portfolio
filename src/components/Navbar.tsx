@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav className="navbar">
       {/* Logo */}
       <div className="logo">
-        <a href="#home">Ashberg</a>
+        <a href="#home">Anish</a>
       </div>
 
       {/* Navigation links */}

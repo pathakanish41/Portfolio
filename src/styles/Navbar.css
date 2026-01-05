@@ -31,7 +31,7 @@
 }
 
 .nav-links li a {
-  color: black;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   display: inline-block;          /* important for transform to work */
   transition: color 0s ease, transform 0.3s ease;
@@ -52,7 +52,7 @@
 /* Icons */
 .icon {
   font-size: 40px;
-  color: #333;
+  color: #00BFFF;
   transition: color 0.3s;
 }
 
@@ -63,7 +63,7 @@
 /* Buttons */
 .btn {
   font-size: 20px;
-  background-color: #007bff;
+  background-color: #00BFFF;
   color: #fff;
   padding: 6px 12px;
   border-radius: 5px;
