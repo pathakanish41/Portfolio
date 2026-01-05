@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../styles/Home.css";
 
 interface Snowflake {
@@ -9,17 +9,15 @@ interface Snowflake {
 }
 
 const Home: React.FC = () => {
-    const [snowflakes, setSnowflakes] = useState<Snowflake[]>([]);
-
-    useEffect(() => {
-        const flakes: Snowflake[] = Array.from({ length: 50 }).map(() => ({
-            left: `${Math.random() * 100}vw`,
-            fontSize: `${Math.random() * 10 + 10}px`,
-            animationDuration: `${Math.random() * 5 + 5}s`,
-            opacity: Math.random(),
-        }));
-        setSnowflakes(flakes);
-    }, []); // empty dependency → run only once after mount
+    const [snowflakes] = useState<Snowflake[]>(
+        () =>
+            Array.from({ length: 50 }).map(() => ({
+                left: `${Math.random() * 100}vw`,
+                fontSize: `${Math.random() * 10 + 10}px`,
+                animationDuration: `${Math.random() * 5 + 5}s`,
+                opacity: Math.random(),
+            }))
+    );
 
     return (
         <section id="home" className="home">
