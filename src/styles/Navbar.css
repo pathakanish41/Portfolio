@@ -83,8 +83,9 @@
     width: 220px;          /* limited width */
     height: 100vh;         /* full height of screen */
     background-color: rgba(0, 0, 0, 0.95); /* black */
-    padding: 80px 20px 20px 20px; /* leave some top padding for spacing */
-    gap: 30px;
+    padding: 0 20px;       /* remove top padding */
+    justify-content: center; /* vertically center the links */
+    gap: 40px;             /* more space between links */
     border-radius: 8px;
     opacity: 0;
     pointer-events: none;
@@ -104,7 +105,7 @@
     display: block;
     font-size: 20px;
     color: white;
-    text-align: right; /* aligns with panel */
+    text-align: right; /* keeps it aligned with panel */
     transition: color 0.3s ease;
   }
 
