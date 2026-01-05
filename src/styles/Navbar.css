@@ -77,13 +77,14 @@
   .nav-links {
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 60px; /* just below navbar */
-    right: 20px; /* align with hamburger */
-    width: 200px; /* fixed width for dropdown */
-    background-color: rgba(0, 0, 0, 0.85);
-    gap: 15px;
-    padding: 15px;
+    position: fixed;       /* fixed so it spans the screen */
+    top: 0;                /* start from top */
+    right: 20px;           /* aligned with hamburger */
+    width: 220px;          /* limited width */
+    height: 100vh;         /* full height of screen */
+    background-color: rgba(0, 0, 0, 0.95); /* black */
+    padding: 80px 20px 20px 20px; /* leave some top padding for spacing */
+    gap: 30px;
     border-radius: 8px;
     opacity: 0;
     pointer-events: none;
@@ -99,14 +100,16 @@
     transform: translateY(0);
   }
 
-  .nav-links li {
-    text-align: right; /* align links to the right */
-  }
-
   .nav-links li a {
     display: block;
-    font-size: 18px;
+    font-size: 20px;
     color: white;
+    text-align: right; /* aligns with panel */
+    transition: color 0.3s ease;
+  }
+
+  .nav-links li a:hover {
+    color: #00BFFF;
   }
 
   .hamburger {
@@ -114,8 +117,10 @@
     cursor: pointer;
     font-size: 30px;
     color: #00BFFF;
+    z-index: 1000; /* above menu */
   }
 }
+
 
 @media screen and (min-width: 769px) {
   .hamburger {

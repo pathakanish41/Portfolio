@@ -19,9 +19,9 @@ const Navbar: React.FC = () => {
       </ul>
 
       <div className="nav-buttons">
-        <a href="https://linkedin.com" target="_blank"><FaLinkedin className="icon" /></a>
-        <a href="https://github.com" target="_blank"><FaGithub className="icon" /></a>
-        <a href="/CV.pdf" download className="btn">Download CV</a>
+        <a href="https://www.linkedin.com/in/anish-pathak-018ba631a/" target="_blank"><FaLinkedin className="icon" /></a>
+        <a href="https://github.com/pathakanish41" target="_blank"><FaGithub className="icon" /></a>
+        <a href="/ANISH-PATHAK-CV.pdf" download className="btn">Download CV</a>
       </div>
 
       <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
