@@ -7,7 +7,7 @@
   background-color: transparent;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* logo left, links center, buttons right */
+  justify-content: space-between; 
   padding: 0 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   z-index: 1000;
@@ -25,21 +25,19 @@
 .nav-links {
   display: flex;
   list-style: none;
-  margin: 0 auto; /* centers links */
   gap: 40px;
-  cursor: pointer;
 }
 
 .nav-links li a {
   color: rgb(255, 255, 255);
   text-decoration: none;
-  display: inline-block;          /* important for transform to work */
-  transition: color 0s ease, transform 0.3s ease;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-links li a:hover {
   color: #ff0000;
-  transform: scale(1.5); 
+  transform: scale(1.2); 
 }
 
 /* Right side buttons */
@@ -49,20 +47,18 @@
   gap: 15px;
 }
 
-/* Icons */
 .icon {
-  font-size: 40px;
+  font-size: 30px;
   color: #00BFFF;
   transition: color 0.3s;
 }
 
 .icon:hover {
-  color: #0077b5; /* LinkedIn blue hover */
+  color: #0077b5;
 }
 
-/* Buttons */
 .btn {
-  font-size: 20px;
+  font-size: 16px;
   background-color: #00BFFF;
   color: #fff;
   padding: 6px 12px;
@@ -75,3 +71,55 @@
 .btn:hover {
   background-color: #0056b3;
 }
+
+/* Mobile dropdown below hamburger, right-aligned */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* just below navbar */
+    right: 20px; /* align with hamburger */
+    width: 200px; /* fixed width for dropdown */
+    background-color: rgba(0, 0, 0, 0.85);
+    gap: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+    z-index: 999; 
+  }
+
+  .nav-links.active {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .nav-links li {
+    text-align: right; /* align links to the right */
+  }
+
+  .nav-links li a {
+    display: block;
+    font-size: 18px;
+    color: white;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 30px;
+    color: #00BFFF;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+}
+
